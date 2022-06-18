@@ -2,14 +2,14 @@
   {{$headings}}
 </h1>
 
-@unless(count($listings)==0)
+@unless (count($listings)==0)
 
 @foreach($listings as $listing)
 <h2>
-  {{print $listing['title']}}
+  <a href="/listings/{{$listing['id']}}">{{$listing['title']}} </a>
 </h2>
 <p>
-  {{print $listing['description']}}
+  {{ $listing['description']}}
 </p>
 @endforeach
 
